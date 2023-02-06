@@ -7,7 +7,7 @@ const PokemonStats = ({ stats }: { stats: PokemonStat[] }): JSX.Element => {
     <>
       <SText.Bold>Stats:</SText.Bold>
       {Object.values(stats).map(stat => (
-        <SText.Normal>
+        <SText.Normal key={`${stat.name}${stat.value}`}>
           {stat.name.toUpperCase()}: {stat.value}
         </SText.Normal>
       ))}
