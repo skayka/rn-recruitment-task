@@ -1,4 +1,4 @@
-import { PokemonListResponse, PokemonResponse } from '../domains/api/api.interface';
+import { PokemonListResponse, PokemonResponse } from './data-interfaces/pokeapi.interface';
 import { Pokemon } from '../domains/pokemon/models';
 
 export const pokemonResponseTransform = (rawResult: PokemonResponse) => {

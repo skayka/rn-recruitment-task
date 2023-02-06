@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { Pokemon } from '../../../api';
 import { Spacer } from '../../../components/ui-helpers';
-import { Pokemon } from '../../../domains/pokemon/models';
 import PokemonBaseData from './PokemonBaseData';
 import { PokemonCardHeader } from './PokemonCardHeader/PokemonCardHeader';
 import PokemonStats from './PokemonStats';

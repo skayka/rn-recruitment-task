@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { config } from '../config';
-import { Pokemon, PokemonList } from '../domains/pokemon/models';
+import { Pokemon, PokemonList } from './pokemon.interface';
 import { pokemonResponseTransform, pokemonListResponseTransform } from './pokemonApiTransforms';
 
 export const pokemonApi = createApi({

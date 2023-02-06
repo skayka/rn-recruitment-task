@@ -1,4 +1,4 @@
-import { EntityEndpoint } from '../../api/api.interface';
+import { EntityEndpoint } from './data-interfaces/pokeapi.interface';
 
 export interface Pokemon {
   id: string;

@@ -1,25 +1,27 @@
 import * as React from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StackNavigatorParamList } from '../../navigation';
-import { usePokemonByUrl } from './hooks/usePokemonByUrl';
 import PokemonCard from './components/PokemonCard';
 import { PendingCentered, ErrorCentered } from '../../components';
+import { useGetPokemonByIdQuery } from '../../api';
 
 type PokemonDetailsProps = NativeStackScreenProps<StackNavigatorParamList, 'PokemonDetails'>;
 
 const PokemonDetailsScreen = ({ route }: PokemonDetailsProps): JSX.Element => {
-  const { url } = route.params;
-  const { error, pending, pokemon } = usePokemonByUrl(url);
+  const { id } = route.params;
+  //const { error, pending, pokemon } = usePokemonByUrl(url);
 
-  if (error) {
-    return <ErrorCentered error={error} />;
+  const { isError, isFetching, data, error } = useGetPokemonByIdQuery(id);
+
+  if (isError) {
+    return <ErrorCentered error={JSON.stringify(error)} />;
   }
 
-  if (pending || typeof pokemon === 'undefined') {
+  if (isFetching || typeof data === 'undefined') {
     return <PendingCentered />;
   }
 
-  return <PokemonCard pokemon={pokemon} />;
+  return <PokemonCard pokemon={data} />;
 };
 
 export default PokemonDetailsScreen;

@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import PokemonList from '../screens/PokemonList';
 import PokemonDetails from '../screens/PokemonDetails/PokemonDetailsScreen';
 export type StackNavigatorParamList = {
   PokemonList: undefined;
-  PokemonDetails: { url: string };
+  PokemonDetails: { id: string };
 };
 
-type PokemonDetailsProps = NativeStackScreenProps<StackNavigatorParamList, 'PokemonDetails'>;
 const Stack = createNativeStackNavigator<StackNavigatorParamList>();
 
 const Navigation = (): JSX.Element => {

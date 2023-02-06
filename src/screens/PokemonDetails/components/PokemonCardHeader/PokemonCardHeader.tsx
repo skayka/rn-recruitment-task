@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { SText } from '../../../../components/ui-helpers';
 import { InlineWrapper } from '../../../../components';
-import { mapArrayWithCommas } from '../../../../core/utils';
+import { mapArrayWithCommas } from '../../../../utils';
 import { HeaderTextWrapper, HeaderWrapper } from '../Wrappers';
 import { PokemonImage } from './PokemonImage';
-import { capitalize } from '../../../../core/utils/string-utils';
-import { pokemonImageCollection } from '../../../../core/static-images/image-collections';
+import { capitalize } from '../../../../utils/string-utils';
+import { pokemonImageCollection } from '../../../../assets/managers/image-collections';
 
 export const PokemonCardHeader = ({ name, id, types }: { name: string; id: string; types: string[] }) => {
   return (
