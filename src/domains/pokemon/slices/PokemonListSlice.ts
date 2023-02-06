@@ -35,9 +35,9 @@ const pokemonListSlice = createSlice({
         state.pending = false;
         state.pokemonList = action.payload;
       })
-      .addCase(fetchPokemonList.rejected, (state, action) => {
+      .addCase(fetchPokemonList.rejected, state => {
         state.pending = false;
-        state.error = action.error.message;
+        state.error = 'Something went wrong while fetching pokemon list. Please check your internet connection.';
       });
   },
 });

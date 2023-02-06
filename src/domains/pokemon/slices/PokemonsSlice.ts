@@ -40,9 +40,10 @@ const pokemonsSlice = createSlice({
         state.pending = false;
         state.pokemons[action.payload.url] = action.payload.pokemon;
       })
-      .addCase(fetchPokemonByUrl.rejected, (state, action) => {
+      .addCase(fetchPokemonByUrl.rejected, state => {
         state.pending = false;
-        state.error = action.error.message;
+        state.error =
+          'Something went wrong while retrieving pokemon details. Please check your internet connection or contact our support.';
       });
   },
 });
