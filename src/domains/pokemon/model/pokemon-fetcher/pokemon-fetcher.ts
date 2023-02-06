@@ -1,7 +1,7 @@
 import { config } from '../../../../config';
 import { Fetcher, AxiosFetcher } from '../../../../core/services/fetcher';
 import { PokemonListResponse, PokemonResponse } from '../../../api/api.interface';
-import { PokemonList, Pokemon } from './../pokemon.interface';
+import { PokemonList, Pokemon } from '../pokemon.interface';
 import { IPokemonFetcher } from './pokemon-fetcher.interface';
 
 class PokemonFetcher implements IPokemonFetcher {

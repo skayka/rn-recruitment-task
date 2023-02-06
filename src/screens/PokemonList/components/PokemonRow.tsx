@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Pressable } from 'react-native';
 import { InlineWrapper, SText } from '../../../components';
-import { pokemonImageCollection } from '../../../core/static-images/image-collections';
+import { pokemonImageCollection } from '../../../core/static-assets-managers/image-collections';
 import { capitalize } from '../../../core/utils/string-utils';
-import { PokemonListItem } from '../../../domains/pokemon/models';
+import { PokemonListItem } from '../../../domains/pokemon/model';
 import { PokemonRowImage } from './PokemonRowImage';
 
 const PokemonRow = ({

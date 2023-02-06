@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import type { Pokemon } from '../models';
+import type { Pokemon } from '../model';
 import { pokemonManager } from '../services/pokemon-manager';
 
 export interface PokemonsSliceStore {

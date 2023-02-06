@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
-import { PokemonList, PokemonListItem } from '../../../domains/pokemon/models';
+import { PokemonList, PokemonListItem } from '../../../domains/pokemon/model';
 import { ListHeader } from './ListHeader';
 import PokemonRow from './PokemonRow';
 

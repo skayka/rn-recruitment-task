@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SText } from '../../../components/ui-helpers';
-import { PokemonStat } from '../../../domains/pokemon/models';
+import { PokemonStat } from '../../../domains/pokemon/model';
 
 const PokemonStats = ({ stats }: { stats: PokemonStat[] }): JSX.Element => {
   return (

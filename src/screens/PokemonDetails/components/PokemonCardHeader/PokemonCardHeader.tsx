@@ -5,7 +5,7 @@ import { mapArrayWithCommas } from '../../../../core/utils';
 import { HeaderTextWrapper, HeaderWrapper } from '../Wrappers';
 import { PokemonImage } from './PokemonImage';
 import { capitalize } from '../../../../core/utils/string-utils';
-import { pokemonImageCollection } from '../../../../core/static-images/image-collections';
+import { pokemonImageCollection } from '../../../../core/static-assets-managers/image-collections';
 
 export const PokemonCardHeader = ({ name, id, types }: { name: string; id: string; types: string[] }) => {
   return (

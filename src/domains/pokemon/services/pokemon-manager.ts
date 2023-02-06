@@ -1,4 +1,4 @@
-import { pokemonFetcher, IPokemonFetcher, Pokemon, PokemonList } from '../models';
+import { pokemonFetcher, IPokemonFetcher, Pokemon, PokemonList } from '../model';
 
 class PokemonManager {
   private _fetcher: IPokemonFetcher;
