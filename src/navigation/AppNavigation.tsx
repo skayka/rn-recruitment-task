@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
-import PokemonList from '../screens/PokemonList';
-import PokemonDetails from '../screens/PokemonDetails/PokemonDetailsScreen';
+import * as React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack'
+import PokemonList from '../screens/PokemonList'
+import PokemonDetails from '../screens/PokemonDetails/PokemonDetailsScreen'
 export type StackNavigatorParamList = {
-  PokemonList: undefined;
-  PokemonDetails: { url: string };
-};
+  PokemonList: undefined
+  PokemonDetails: { url: string }
+}
 
-type PokemonDetailsProps = NativeStackScreenProps<StackNavigatorParamList, 'PokemonDetails'>;
-const Stack = createNativeStackNavigator<StackNavigatorParamList>();
+type PokemonDetailsProps = NativeStackScreenProps<StackNavigatorParamList, 'PokemonDetails'>
+const Stack = createNativeStackNavigator<StackNavigatorParamList>()
 
 const Navigation = (): JSX.Element => {
   return (
@@ -19,11 +19,11 @@ const Navigation = (): JSX.Element => {
         <Stack.Screen
           name="PokemonDetails"
           component={PokemonDetails}
-          options={{ headerTitle: '', headerBackTitle: '', headerTransparent: true }}
+          options={{ headerTitle: '', headerBackTitle: '', headerTransparent: true, headerShadowVisible: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
